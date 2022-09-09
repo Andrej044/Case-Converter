@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    max-width: 100%;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    color:rgb(50,50,50);
+    text-align: center;
+}
+.app-wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.title{
+    text-align: left;
+}
+.title h1{
+    font-size: 2.2em;
+}
+.app-controls{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.app__text-area-label,.app__text-area{
+    width: 100%;
+    height:300px;
+}
+.app__text-area{
+    resize: none;
+    color: rgb(50,40,70);
+    font-size: 1.2em;
+}
+.app__buttons{
+    margin-top: 1em;
+}
+.app__button{
+    padding: 5px 10px;
+    background-color: rgb(250, 120, 120);
+    font-size: 1.3em;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.app__button:not(:first-child){
+    margin-left: 10px;
+}
