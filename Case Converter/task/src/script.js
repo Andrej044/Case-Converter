@@ -2,6 +2,7 @@ const upperCaseBtn = document.getElementById("upper-case");
 const lowerCaseBtn = document.getElementById("lower-case");
 const properCaseBtn = document.getElementById("proper-case");
 const sentenceCaseBtn = document.getElementById("sentence-case");
+const saveTextBtn = document.getElementById("save-text-file");
 
 const textArea = document.getElementById("text-area");
 
@@ -28,3 +29,20 @@ sentenceCaseBtn.addEventListener('click', () => {
       return b + c.toUpperCase();
    });
 })
+
+saveTextBtn.addEventListener("click", () => {
+   saveText("text.txt",textArea.value)
+})
+
+function saveText(filename, text){
+   let element = document.createElement('a');
+   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+   element.setAttribute('download', filename);
+
+   element.style.display = 'none';
+   document.body.appendChild(element);
+
+   element.click();
+
+   document.body.removeChild(element);
+}
