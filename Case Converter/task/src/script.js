@@ -15,7 +15,7 @@ lowerCaseBtn.addEventListener("click",() => {
 });
 properCaseBtn.addEventListener("click", () => {
    let tmp = textArea.value;
-   textArea.value = tmp.toLowerCase().split(/\s/).map(word => (word[0].toUpperCase() + word.substring(1))
+   textArea.value = tmp.toLowerCase().split(/\s+/g).map(word => (word[0].toUpperCase() + word.substring(1))
    ).join(' ');
 });
 sentenceCaseBtn.addEventListener('click', () => {
